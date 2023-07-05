@@ -1,0 +1,18 @@
+.page {
+    margin: 0 auto;
+    width: 750px;
+}
+
+.gameBoard {
+    display: flex;
+    flex-wrap: wrap;
+    height: 600px;
+    width: 100%;
+    border: 2px solid black;
+
+}
+
+.gameBoard img {
+    width: 150px;
+    height: 150px;
+}
