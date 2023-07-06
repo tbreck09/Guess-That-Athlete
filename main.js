@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     { name: 'Tiger Woods', image: 'images/Tiger Woods.jpeg'},
     { name: 'joey votto', image: 'images/joey votto.jpg'},
     { name: 'joey votto', image: 'images/joey votto.jpg'},
-    { name: 'blank', image: 'images/blank.jpeg'},
     { name: 'derrick henry', image: 'images/derrick henry.jpeg'},
     { name: 'derrick henry', image: 'images/derrick henry.jpeg'},
     { name: 'steph curry', image: 'images/steph curry.jpeg'},
@@ -22,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { name: 'pat mahomes', image: 'images/pat mahomes.jpeg'},
     { name: 'pat mahomes', image: 'images/pat mahomes.jpeg'},
     { name: 'faceCard', image: 'images/facecard.jpeg'},
+    { name: 'blank', image: 'images/blank.jpeg'}
     
   ];
 
@@ -53,7 +53,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function flipCard() {
+  function resetGame() {
+    attempts = 0
+    foundCards = 0
+    attemptsHolder.textContent = attempts
+    foundHolder.textContent = foundCards
+    chosenCards = []
+    chosenCardsIds = []
+    messageElement.textContent = ""
+  
+    const cards = document.querySelectorAll("img")
+    for (let card of cards) {
+      card.setAttribute("src", "images/faceCard.jpeg")
+    }
+  
+    cardPictures.sort(() => 0.5 - Math.random())
+  }
+  
+  
+  const resetButton = document.getElementById("resetButton")
+  resetButton.addEventListener("click", resetGame)
+
+
+
+
+    function flipCard() {
     if (chosenCards.length !== 2) {
       let cardId = this.getAttribute('data-id')
       if (this.getAttribute('src') !== 'images/blank.jpeg') {
@@ -70,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const maxAttempts = 20
   const messageElement =  document.getElementById('message')
 
-
+  
   function checkForMatch() {
     attempts++
     let cards = document.querySelectorAll('img')
@@ -99,4 +123,5 @@ document.addEventListener('DOMContentLoaded', () => {
     messageElement.textContent = message
   }
   initializeBoard()
+  resetGame()
 })
