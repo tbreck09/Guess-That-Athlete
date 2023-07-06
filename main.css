@@ -1,6 +1,12 @@
+body {
+    background: grey;
+}
+
+
 .page {
     margin: 0 auto;
     width: 750px;
+
 }
 
 .gameBoard {
@@ -8,7 +14,7 @@
     flex-wrap: wrap;
     height: 600px;
     width: 100%;
-    border: 2px solid black;
+    border: 1px solid black;
 
 }
 

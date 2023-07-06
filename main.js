@@ -1,53 +1,102 @@
-const cardPictures = [
-  { name: 'Lebron', image: 'Desktop/Lebron.png' }
+document.addEventListener('DOMContentLoaded', () => {
   
-  
-   ]
-   cardPictures.sort( () => 0.5 - Math.random() )
-  
+
+    const cardPictures = [
+    { name: 'Lebron', image: 'images/Lebron.jpeg' },
+    { name: 'Lebron', image: 'images/Lebron.jpeg' },
+    { name: 'joey B', image: 'images/joey B.jpg'},
+    { name: 'joey B', image: 'images/joey B.jpg'},
+    { name: 'Jamarr chase', image: 'images/Jamarr chase.jpg'},
+    { name: 'Jamarr chase', image: 'images/Jamarr chase.jpg'},
+    { name: 'Tiger Woods', image: 'images/Tiger Woods.jpeg'},
+    { name: 'Tiger Woods', image: 'images/Tiger Woods.jpeg'},
+    { name: 'joey votto', image: 'images/joey votto.jpg'},
+    { name: 'joey votto', image: 'images/joey votto.jpg'},
+    { name: 'blank', image: 'images/blank.jpeg'},
+    { name: 'derrick henry', image: 'images/derrick henry.jpeg'},
+    { name: 'derrick henry', image: 'images/derrick henry.jpeg'},
+    { name: 'steph curry', image: 'images/steph curry.jpeg'},
+    { name: 'steph curry', image: 'images/steph curry.jpeg'},
+    { name: 'lionel messi', image: 'images/lionel messi.jpeg'},
+    { name: 'lionel messi', image: 'images/lionel messi.jpeg'},
+    { name: 'pat mahomes', image: 'images/pat mahomes.jpeg'},
+    { name: 'pat mahomes', image: 'images/pat mahomes.jpeg'},
+    { name: 'faceCard', image: 'images/facecard.jpeg'},
+    
+  ];
+
+
+  cardPictures.sort(() => 0.5 - Math.random())
+
   const board = document.querySelector('.gameBoard')
   const attemptsHolder = document.querySelector('.attemptsHolder')
-  const foundsHolder = document.querySelector('.foundHolder')
-  const cardsInGame = 10
-  
+  const foundHolder = document.querySelector('.foundHolder')
+  const cardsIngame = 10
+
   let attempts = 0
   let foundCards = 0
-  
-  foundsHolder.textContent = foundCards
   attemptsHolder.textContent = attempts
-  
+  foundHolder.textContent = foundCards
+
   let chosenCards = []
   let chosenCardsIds = []
+
   
-  
-   function initilizeBoard() {
-      for (let i = 0; i < cardPictures.length; i++) {
-          let card = document.createElement('img')
-          card.setAttribute('src', 'images/faceCard.png')
-          card.setAttribute('data-id',i)
-          card.addEventListener('click', flipCard)
-          board.appendChild(card)
-      }
-   }
-  
-  
-  function flipCard(){
-      if(chosenCards.length < 2) {
+
+  function initializeBoard() {
+    for (let i = 0; i < cardPictures.length; i++) {
+      let card = document.createElement('img')
+      card.setAttribute('src', 'images/faceCard.jpeg')
+      card.setAttribute('data-id', i)
+      card.addEventListener('click', flipCard)
+      board.appendChild(card)
+    }
+  }
+
+  function flipCard() {
+    if (chosenCards.length !== 2) {
       let cardId = this.getAttribute('data-id')
-      if(this.getAttribute('src') !== 'images/blank.png'){
-          chosenCards.push(cardPictures[cardId].name)
-          chosenCardsIds.push(cardId)
-          this.setAttribute('src', cardPictures[cardId].image)
-          if(chosenCards.length === 2)
-              setTimeout(checkForMatch, 300)
+      if (this.getAttribute('src') !== 'images/blank.jpeg') {
+        chosenCards.push(cardPictures[cardId].name)
+        chosenCardsIds.push(cardId)
+        this.setAttribute('src', cardPictures[cardId].image)
+        if (chosenCards.length === 2) {
+          setTimeout(checkForMatch, 1000)
+        }
       }
+    }
   }
+
+  const maxAttempts = 20
+  const messageElement =  document.getElementById('message')
+
+
+  function checkForMatch() {
+    attempts++
+    let cards = document.querySelectorAll('img')
+    let firstCard = chosenCardsIds[0]
+    let secondCard = chosenCardsIds[1]
+    if (chosenCards[0] === chosenCards[1]) {
+      foundCards++
+      cards[firstCard].setAttribute('src', 'images/blank.jpeg')
+      cards[secondCard].setAttribute('src', 'images/blank.jpeg')
+    } else {
+      cards[firstCard].setAttribute('src', 'images/faceCard.jpeg')
+      cards[secondCard].setAttribute('src', 'images/faceCard.jpeg')
+    }
+    chosenCards = []
+    chosenCardsIds = []
+    attemptsHolder.textContent = attempts
+    foundHolder.textContent = foundCards
+    if (foundCards === cardsIngame) {
+      showMessage('Good job!')
+    }else if (attempts === maxAttempts) {
+      showMessage('Game Over!')
+    }
   }
-  
-  
-  
-  
-  
-  //initilizeBoard() 
-  
-  
+
+  function showMessage(message) {
+    messageElement.textContent = message
+  }
+  initializeBoard()
+})
