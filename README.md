@@ -1,4 +1,4 @@
-<h1>Guess That Athlete!</h1>
+<h1>Match That Athlete!</h1>
 
 This is a game where you have to match the athletes within a certain amount of guesses!
 
