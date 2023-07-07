@@ -23,5 +23,4 @@ Html, CSS, JavaScript
 
 
 <h2>Getting Started</h2>
-https://tbreck09.github.io/Guess-That-Athlete/
-
+https://tbreck09.github.io/Match-That-Athlete/
