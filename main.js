@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { name: 'lionel messi', image: 'images/lionel messi.jpeg'},
     { name: 'pat mahomes', image: 'images/pat mahomes.jpeg'},
     { name: 'pat mahomes', image: 'images/pat mahomes.jpeg'},
-    { name: 'facecard', image: 'images/faceCard.jpeg'},
+    { name: 'faceCard', image: 'images/faceCard.jpeg'},
     { name: 'blank', image: 'images/blank.jpeg'}
     
   ];
