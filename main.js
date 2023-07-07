@@ -2,26 +2,26 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
     const cardPictures = [
-    { name: 'Lebron', image: 'images/Lebron.jpeg' },
-    { name: 'Lebron', image: 'images/Lebron.jpeg' },
-    { name: 'joey B', image: 'images/joey B.jpeg'},
-    { name: 'joey B', image: 'images/joey B.jpeg'},
-    { name: 'Jamarr chase', image: 'images/jamarr chase.jpeg'},
-    { name: 'Jamarr chase', image: 'images/jamarr chase.jpeg'},
-    { name: 'Tiger Woods', image: 'images/Tiger Woods.jpeg'},
-    { name: 'Tiger Woods', image: 'images/Tiger Woods.jpeg'},
-    { name: 'joey votto', image: 'images/joey votto.jpeg'},
-    { name: 'joey votto', image: 'images/joey votto.jpeg'},
-    { name: 'derrick henry', image: 'images/derrick henry.jpeg'},
-    { name: 'derrick henry', image: 'images/derrick henry.jpeg'},
-    { name: 'steph curry', image: 'images/steph curry.jpeg'},
-    { name: 'steph curry', image: 'images/steph curry.jpeg'},
-    { name: 'lionel messi', image: 'images/lionel messi.jpeg'},
-    { name: 'lionel messi', image: 'images/lionel messi.jpeg'},
-    { name: 'pat mahomes', image: 'images/pat mahomes.jpeg'},
-    { name: 'pat mahomes', image: 'images/pat mahomes.jpeg'},
-    { name: 'faceCard', image: 'images/faceCard.jpeg'},
-    { name: 'blank', image: 'images/blank.jpeg'}
+    { name: 'Lebron', image: 'images/lebron.png' },
+    { name: 'Lebron', image: 'images/lebron.png' },
+    { name: 'joey B', image: 'images/joey B.png'},
+    { name: 'joey B', image: 'images/joey B.png'},
+    { name: 'Jamarr chase', image: 'images/jamarr chase.png'},
+    { name: 'Jamarr chase', image: 'images/jamarr chase.png'},
+    { name: 'Tiger Woods', image: 'images/tiger Woods.png'},
+    { name: 'Tiger Woods', image: 'images/tiger Woods.png'},
+    { name: 'joey votto', image: 'images/joey v.png'},
+    { name: 'joey votto', image: 'images/joey v.png'},
+    { name: 'derrick henry', image: 'images/derrickhenry.png'},
+    { name: 'derrick henry', image: 'images/derrick henry.png'},
+    { name: 'steph curry', image: 'images/steph curry.png'},
+    { name: 'steph curry', image: 'images/steph curry.png'},
+    { name: 'lionel messi', image: 'images/lionel messi.png'},
+    { name: 'lionel messi', image: 'images/lionel messi.png'},
+    { name: 'pat mahomes', image: 'images/pat mahomes.png'},
+    { name: 'pat mahomes', image: 'images/pat mahomes.png'},
+    { name: 'faceCard', image: 'images/facecard.png'},
+    { name: 'blank', image: 'images/blank.png'}
     
   ];
 
