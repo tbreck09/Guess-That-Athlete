@@ -2,14 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
     const cardPictures = [
-    { name: 'Lebron', image: 'images/lebron.png' },
-    { name: 'Lebron', image: 'images/lebron.png' },
+    { name: 'lebron', image: 'images/lebron.png' },
+    { name: 'lebron', image: 'images/lebron.png' },
     { name: 'joey B', image: 'images/joey B.png'},
     { name: 'joey B', image: 'images/joey B.png'},
-    { name: 'Jamarr chase', image: 'images/jamarr chase.png'},
-    { name: 'Jamarr chase', image: 'images/jamarr chase.png'},
-    { name: 'Tiger Woods', image: 'images/tiger Woods.png'},
-    { name: 'Tiger Woods', image: 'images/tiger Woods.png'},
+    { name: 'jamarr chase', image: 'images/jamarr chase.png'},
+    { name: 'jamarr chase', image: 'images/jamarr chase.png'},
+    { name: 'tiger Woods', image: 'images/tiger Woods.png'},
+    { name: 'tiger Woods', image: 'images/tiger Woods.png'},
     { name: 'joey votto', image: 'images/joey v.png'},
     { name: 'joey votto', image: 'images/joey v.png'},
     { name: 'derrick henry', image: 'images/derrickhenry.png'},
