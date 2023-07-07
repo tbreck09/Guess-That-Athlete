@@ -24,3 +24,12 @@ Html, CSS, JavaScript
 
 <h2>Getting Started</h2>
 https://tbreck09.github.io/Match-That-Athlete/
+
+<h2>Next Steps</h2>
+
+Add a countdown timer and change the amount of attempts that you get.
+
+Make the flipcard animation look more real.
+
+
+
